@@ -35,15 +35,15 @@ $string['choosereadme'] = '
 <p>This theme is based upon the Bootstrap theme, which was created for Moodle 2.5, with the help of:<br>
 Stuart Lamour, Mark Aberdour, Paul Hibbitts, Mary Evans.</p>
 <h3>Theme Credits</h3>
-<p>Thin Red Line Author: Malcolm Hay</p>
+<p>Thin Red Line Author: Malcolm Hay<br>
+Contact: trl.education@gmail.com</p>
 <p>Moodle Clean Theme Authors: Bas Brands, David Scotson, Mary Evans<br>
-Contact: trl.education@gmail.com<br>
 Website: <a href="http://www.basbrands.nl">www.basbrands.nl</a>
 </p>
 <p>Special thanks:</p>
 <p>To Gareth J Barnard for the code for My Courses <br>
-and My Dashboard in the Custom Menu in the Moodle Essential theme.</p>
-<p>FontAwesome for the amazing work they do supplying icons</p>
+and My Dashboard in the Custom Menu from the Moodle Essential theme.</p>
+<p>FontAwesome for the amazing work they do creating and supplying icons</p>
 <h3>Report a bug:</h3>
 <p><a href="http://tracker.moodle.org">http://tracker.moodle.org</a></p>
 <h3>More information</h3>
