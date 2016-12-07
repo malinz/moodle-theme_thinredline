@@ -5,7 +5,7 @@ The theme also has FontAwesome icons embedded and works well with the FontAwesom
 /* How to copy and customise this theme.
 ----------------------------------------*/
 
-This document describes how to copy and customise the Clean (bootstrapbase) theme so that
+This document describes how to copy and customise the Thin Red Line (bootstrapbase) theme so that
 you can build on this to create a theme of your own. It assumes you have some
 understanding of how themes work within Moodle 2.5, as well as a basic understanding
 of HTML and CSS.
