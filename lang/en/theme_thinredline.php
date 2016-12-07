@@ -69,6 +69,16 @@ $string['pluginname'] = 'Thin Red Line';
 $string['region-side-post'] = 'Right';
 $string['region-side-pre'] = 'Left';
 
+//Custom block regions
+//Top block region
+$string['region-top-fullwidth'] = 'Top Full Width';
+//Upper course content region
+$string['region-upper-fullwidth'] = 'Upper Full Width';
+//Lower course content region
+$string['region-lower-fullwidth'] = 'Lower Full Width';
+//Bottom block region
+$string['region-bottom-fullwidth'] = 'Bottom Full Width';
+
 $string['sitelogo'] = 'Site logo';
 $string['sitename'] = 'Display site name along with small logo';
 $string['sitenamedesc'] = 'If there is no small logo, the site name is always displayed in the navigation bar. If a small logo is set, it may be displayed with or without the site name.';
