@@ -2,9 +2,6 @@
 This is a variation on the Moodle Clean theme with custom block areas and My Courses and My Dashboard added to the custom menu.
 The theme also has FontAwesome icons embedded and works well with the FontAwesome filter.
 
-/* How to copy and customise this theme.
-----------------------------------------*/
-
 This document describes how to copy and customise the Thin Red Line (bootstrapbase) theme so that
 you can build on this to create a theme of your own. It assumes you have some
 understanding of how themes work within Moodle 2.5, as well as a basic understanding
