@@ -25,14 +25,29 @@
 // Get the HTML for the settings bits.
 $html = theme_thinredline_get_html_for_settings($OUTPUT, $PAGE);
 
-// Set default (LTR) layout mark-up for a two column page (side-pre-only).
-$regionmain = 'span9 pull-right';
-$sidepre = 'span3 desktop-first-column';
+// Set default (LTR) layout mark-up for a three column page.
+$topfullwidth = 'span12';
+$upperfullwidth = 'span12';
+$regionmain = 'span8 pull-right';
+$sidepre = 'span4 desktop-first-column';
+$lowerfullwidth = 'span12';
+$bottomfullwidth = 'span12';
 // Reset layout mark-up for RTL languages.
 if (right_to_left()) {
-    $regionmain = 'span9 desktop-first-column';
-    $sidepre = 'span3 pull-right';
+    $topfullwidth = 'span12';
+    $upperfullwidth = 'span12';
+    $regionmain = 'span8';
+    $sidepre = 'span4 pull-right';
+	$lowerfullwidth = 'span12';
+	$bottomfullwidth = 'span12';
 }
+
+//Checks to see if there is content to display
+$hastopfullwidth = $PAGE->blocks->region_has_content('top-fullwidth', $OUTPUT);
+$hasbottomfullwidth = $PAGE->blocks->region_has_content('bottom-fullwidth', $OUTPUT);
+$hasupperfullwidth = $PAGE->blocks->region_has_content('upper-fullwidth', $OUTPUT);
+$haslowerfullwidth = $PAGE->blocks->region_has_content('lower-fullwidth', $OUTPUT);
+
 
 echo $OUTPUT->doctype() ?>
 <html <?php echo $OUTPUT->htmlattributes(); ?>>
@@ -67,17 +82,38 @@ echo $OUTPUT->doctype() ?>
 <div id="page" class="container-fluid">
     <?php echo $OUTPUT->full_header(); ?>
     <div id="page-content" class="row-fluid">
+        <?php
+		if ($hastopfullwidth)  {
+			echo $OUTPUT->blocks('top-fullwidth', $topfullwidth);
+		}
+		?>
         <section id="region-main" class="<?php echo $regionmain; ?>">
+            <?php
+			if ($hasupperfullwidth)  {
+				echo $OUTPUT->blocks('upper-fullwidth', $upperfullwidth); 
+			}
+			?>                
             <?php
             echo $OUTPUT->course_content_header();
             echo $OUTPUT->main_content();
             echo $OUTPUT->course_content_footer();
             ?>
+             <?php
+             if ($haslowerfullwidth)  {
+				echo $OUTPUT->blocks('lower-fullwidth', $lowerfullwidth); 
+			}
+			?>            
         </section>
         <?php echo $OUTPUT->blocks('side-pre', $sidepre);
         ?>
     </div>
-
+    <div class="row-fluid">
+     <?php
+	if ($hasbottomfullwidth)  {
+		echo $OUTPUT->blocks('bottom-fullwidth', $bottomfullwidth); 
+	}
+	?>
+	</div>
     <footer id="page-footer">
         <div id="course-footer"><?php echo $OUTPUT->course_footer(); ?></div>
         <p class="helplink"><?php echo $OUTPUT->page_doc_link(); ?></p>
